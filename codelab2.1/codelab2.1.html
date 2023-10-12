@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operasi Penjumlahan Bilangan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+        .calculator {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #258cd1;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Operasi Penjumlahan Bilangan</h1>
+
+        <input type="text" id="bilangan1" placeholder="Bilangan 1">
+        <input type="text" id="bilangan2" placeholder="Bilangan 2">
+        <br>
+        <button onclick="hitungPenjumlahan()">Hitung</button>
+        <button onclick="resetForm()">Reset</button>
+    </div>
+
+    <script>
+        function hitungPenjumlahan() {
+            var bilangan1 = parseFloat(document.getElementById("bilangan1").value);
+            var bilangan2 = parseFloat(document.getElementById("bilangan2").value);
+
+            if (!isNaN(bilangan1) && !isNaN(bilangan2)) {
+                var hasil = bilangan1 + bilangan2;
+                alert("Hasil penjumlahan: " + hasil);
+            } else {
+                alert("Masukkan bilangan yang valid.");
+            }
+        }
+
+        function resetForm() {
+            document.getElementById("bilangan1").value = "";
+            document.getElementById("bilangan2").value = "";
+        }
+    </script>
+</body>
+</html>
